@@ -1,7 +1,7 @@
 const webpack = require('webpack')
 const path = require('path')
 
-const RuxConsolePlugin = require('../plugins/sec-console-plugin')
+const SecConsolePlugin = require('../plugins/sec-console-plugin')
 
 const devConfig = (basePath) => {
   return {
@@ -19,12 +19,12 @@ const devConfig = (basePath) => {
         // 代理服务器
       }
     },
-   plugins:[
-     new webpack.HotModuleReplacementPlugin(),
-     new RuxConsolePlugin({
-       dec:1
-     })
-   ]
+    plugins:[
+      new webpack.HotModuleReplacementPlugin(),
+      new SecConsolePlugin({
+        dec:1
+      })
+    ]
   }
 }
 
